@@ -3,12 +3,12 @@ document.getElementById('language-select').addEventListener('change', function (
 
     let url = '';
     if (selectedLanguage === 'tr') {
-        url = 'http://127.0.0.1:8000//home/tr';
+        url = '/tr';
     } else if (selectedLanguage === 'en') {
-        url = 'http://127.0.0.1:8000//home/en';
+        url = '/en';
     }
 
-    window.location.href = url;
+    window.location.href = window.location.href.slice(0, -3) + url;
 });
 
 let text = "";

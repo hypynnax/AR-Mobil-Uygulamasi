@@ -525,13 +525,14 @@ nav {
     font-size: 1em;
     padding: 1.5em 1em;
     width: 40em;
-    height: 16em;
+    height: auto !important;
     margin: 100px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
+    text-align: justify;
 }
 
 .terminal-header {
@@ -580,7 +581,7 @@ nav {
 
 .terminal-text {
     display: inline-block;
-    white-space: pre-wrap;
+    white-space: wrap;
     overflow: hidden;
     animation: typeWriter 10s steps(100, end) 1 normal both, blinkCursor 0.75s step-end infinite;
     padding: 20px;
@@ -911,6 +912,108 @@ nav {
     line-height: 1.4;
 }
 
+/* İletişim Sayfası */
+.contact-container {
+    margin-top: 200px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.contact-wrapper {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact {
+    width: 300px;
+    height: 254px;
+    background: lightgrey;
+    overflow: hidden;
+    display: flex;
+}
+
+.content {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    padding: 20px;
+}
+
+.content h3 {
+    margin-bottom: 10px;
+}
+
+.address p{
+    margin-bottom: 5px;
+}
+
+.circles,
+.browser {
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.circles {
+    width: 20%;
+    gap: 8px;
+    padding: 10px;
+}
+
+.c {
+    width: 09px;
+    height: 9px;
+    border-radius: 50%;
+    box-shadow: inset 2px 2px 5px rgba(235, 235, 235, 0.356);
+}
+
+.c:first-child {
+    background-color: red;
+}
+
+.c:nth-child(2) {
+    background-color: rgb(204, 167, 4);
+}
+
+.c:last-child {
+    background-color: green;
+}
+
+.browser {
+    width: 80%;
+    padding: 5px;
+    display: flex;
+    gap: 10px;
+}
+
+.chevrons {
+    display: flex;
+}
+
+.search-bar {
+    position: relative;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: rgb(88, 88, 88);
+    box-shadow: inset 2px 2px 2px #05050525;
+}
+
+.search-bar svg {
+    position: absolute;
+    left: 10px;
+}
+
 /* Footer Download */
 .footer {
     position: relative;
@@ -996,6 +1099,148 @@ nav {
     font-weight: 600;
 }
 
+/* Footer Up */
+.footer-up {
+    width: 100%;
+    padding: 30px 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #555;
+}
+
+.footer-up-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.footer-up-left div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.footer-up-left div h1 {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 24px;
+}
+
+.footer-up-left div a {
+    text-decoration: none;
+    color: #999;
+    margin: 5px;
+}
+
+/* Footer Up Social Icon */
+.social-login-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    -webkit-box-reflect: below 5px linear-gradient(transparent, #00000055);
+}
+
+.social-login-icons svg {
+    width: 40px;
+}
+
+.social-icon-1,
+.social-icon-1-1,
+.social-icon-2,
+.social-icon-2-2,
+.social-icon-3,
+.social-icon-3-3,
+.social-icon-4,
+.social-icon-4-4 {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    margin: 20px 0 0px 0;
+    cursor: pointer;
+}
+
+.icon svg {
+    fill: #111;
+}
+
+.socialcontainer {
+    height: 80px;
+    overflow: hidden;
+}
+
+.social-icon-1 {
+    transition-duration: 0.4s;
+    background-color: rgb(0, 0, 0);
+    transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+}
+
+.social-icon-1 svg,
+.social-icon-2 svg,
+.social-icon-3 svg,
+.social-icon-4 svg {
+    opacity: 0;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+}
+
+.social-icon-1-1 {
+    transition-duration: 0.4s;
+    background-color: rgb(0, 0, 0, 0);
+}
+
+.socialcontainer:hover .social-icon-1 {
+    transform: translateY(-70px);
+}
+
+.socialcontainer:hover .social-icon-1 svg,
+.socialcontainer:hover .social-icon-2 svg,
+.socialcontainer:hover .social-icon-3 svg,
+.socialcontainer:hover .social-icon-4 svg {
+    opacity: 1;
+}
+
+.social-icon-2 {
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+    background: linear-gradient(72.44deg,
+            #ff7a00 11.92%,
+            #ff0169 51.56%,
+            #d300c5 85.69%);
+}
+
+.socialcontainer:hover .social-icon-2 {
+    transform: translateY(-70px);
+}
+
+.social-icon-3 {
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+    background: #316ff6;
+}
+
+.socialcontainer:hover .social-icon-3 {
+    transform: translateY(-70px);
+}
+
+.social-icon-4 {
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+
+    background: linear-gradient(180deg,
+            rgba(129, 34, 144, 1) 0%,
+            rgba(77, 34, 124, 1) 91%);
+}
+
+.socialcontainer:hover .social-icon-4 {
+    transform: translateY(-70px);
+}
+
 /* Footer Down */
 .footer-down {
     position: relative;
@@ -1062,7 +1307,6 @@ nav {
 
     .terminal-loader {
         width: 19em;
-        height: 30em;
     }
 
     .terminal-text {
@@ -1077,6 +1321,15 @@ nav {
     .phone-buttons {
         flex-direction: column;
     }
+
+    .footer {
+        position: relative !important;
+    }
+
+    .footer-up {
+        flex-direction: column;
+        padding-bottom: 120px;
+    }
 }
 
 @media (max-width: 376px) {
@@ -1090,7 +1343,6 @@ nav {
 
     .terminal-loader {
         width: 19em;
-        height: 30em;
     }
 
     .card {
@@ -1115,7 +1367,6 @@ nav {
 
     .terminal-loader {
         width: 19em;
-        height: 30em;
     }
 
     .footer-down {
