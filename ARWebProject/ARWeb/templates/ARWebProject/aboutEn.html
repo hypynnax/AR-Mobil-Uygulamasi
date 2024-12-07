@@ -1,0 +1,45 @@
+{% extends 'ARWebProject/baseEn.html' %}
+{% load static %}
+{% block title %}About{% endblock %}
+{% block content %}
+{% include 'ARWebProject/navbarEn.html' %}
+
+<body>
+    <video autoplay muted loop class="background-video">
+        <source src="../../static/ARWebProject/img/background.mp4" type="video/mp4">
+    </video>
+
+    <div class="terminal-loader" style="margin-top: 110px;">
+        <div class="terminal-header">
+            <div class="terminal-title">About</div>
+            <div class="terminal-controls">
+                <div class="control close"></div>
+                <div class="control minimize"></div>
+                <div class="control maximize"></div>
+            </div>
+        </div>
+
+        <div class="terminal-text">
+            Korkut the Wise is an innovative mobile application that develops interactive educational technologies for
+            children company. In the rapidly developing world of technology, children's creative thinking, problem
+            solving and informatics We believe in the importance of developing their skills. In this direction, we are
+            using augmented reality (AR) technology to make computing education for children fun, accessible and
+            sustainable by using to improve children's digital literacy skills.
+
+            Our app aims to strengthen children's digital literacy skills and empower them with the technology of the
+            future. leaders in the field of science. Covering important topics such as science, mathematics, computer
+            programming Our content enables children to build a more meaningful relationship with technology. With AR
+            technology while making learning fun by combining interactivity, children will be able to find themselves in
+            the world of informatics. to become confident individuals.
+        </div>
+    </div>
+
+    <footer class="footer" style="position: fixed; bottom: 0; left: 0;">
+        {% include 'ARWebProject/footerEn.html' %}
+    </footer>
+
+    <script src="../../static/ARWebProject/script.js"></script>
+</body>
+
+</html>
+{% endblock %}

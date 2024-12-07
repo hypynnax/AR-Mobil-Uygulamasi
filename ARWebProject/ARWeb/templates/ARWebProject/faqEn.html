@@ -1,0 +1,147 @@
+{% extends 'ARWebProject/baseEn.html' %}
+{% load static %}
+{% block title %}FAQ{% endblock %}
+{% block content %}
+{% include 'ARWebProject/navbarEn.html' %}
+
+<body style="display: flex; justify-content: center; align-items: center; background-color: #1e2a38; color: #ffffff;">
+    <div class="faq-container">
+        <div class="faq-title">Frequently Asked Questions</div>
+
+        <input type="text" class="search-box" placeholder="Search questions..." onkeyup="filterQuestions()">
+
+        <div class="faq-item">
+            <div class="faq-question">What is the purpose of this application? <span>+</span></div>
+            <div class="faq-answer">This application allows children to learn about different topics in a fun and
+                interactive way. Through Augmented Reality, they can view various digital elements in the real world.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What is Augmented Reality (AR)? <span>+</span></div>
+            <div class="faq-answer">AR is a technology that adds digital elements to the real world. With this app,
+                children can see 3D objects and animations in their actual environment by using the tablet or phone
+                camera.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What age group is this application suitable for? <span>+</span></div>
+            <div class="faq-answer">This app is generally designed for children aged 6-12. Parental supervision is
+                recommended for younger children.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Is an internet connection required to use the app? <span>+</span></div>
+            <div class="faq-answer">Yes, some content requires Wi-Fi or mobile data to work. However, certain features
+                are available offline.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Is this app safe for children? <span>+</span></div>
+            <div class="faq-answer">Yes, the app is designed to provide safe content for children and does not contain
+                any harmful material.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How do children use the app? <span>+</span></div>
+            <div class="faq-answer">After downloading the app, children can use the tablet or phone camera to see
+                various 3D objects and animations by pointing to specific locations and can also play interactive games.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Is the app free? <span>+</span></div>
+            <div class="faq-answer">The basic features of the app are free, but there is a paid version to access more
+                content and some special features.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What type of content does the app have? <span>+</span></div>
+            <div class="faq-answer">The app offers AR-supported content on various topics like animals, nature, science,
+                and mythology, helping children learn while having fun.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Does the app include any games? <span>+</span></div>
+            <div class="faq-answer">Yes, there are games related to certain topics. For example, children can feed
+                virtual animals or complete tasks in science-themed mini-games.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How does the app contribute to children's learning? <span>+</span></div>
+            <div class="faq-answer">The app reinforces what children learn in school through augmented reality and helps
+                them discover new topics.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Will my child be exposed to screens for too long? <span>+</span></div>
+            <div class="faq-answer">The app is designed to offer short activities. Parents can monitor screen time and
+                encourage breaks when needed.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Does my child need to stay in one place while using the app? <span>+</span></div>
+            <div class="faq-answer">Yes, for safety, it is important for children to stay in one place while using the
+                app. They are encouraged to keep the device steady and avoid running or moving.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Do I need a specific device to use all app features? <span>+</span></div>
+            <div class="faq-answer">Most modern smartphones and tablets support augmented reality. However, some
+                features may not work properly on older devices.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Is it safe for my child to use the app alone? <span>+</span></div>
+            <div class="faq-answer">Yes, although the content is appropriate for children, parental guidance is
+                recommended, especially for younger children.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Does this app help with topics my child learns at school? <span>+</span></div>
+            <div class="faq-answer">Yes, some content supports school curriculum topics, allowing children to see their
+                knowledge in action.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Can my child contribute content to the app? <span>+</span></div>
+            <div class="faq-answer">Currently, user-generated content is not available, but new features may be added
+                with future updates.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Does the app take up a lot of storage? <span>+</span></div>
+            <div class="faq-answer">The app size may vary with additional content. To avoid large storage use,
+                unnecessary files can be periodically cleared.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">In what language are AR contents provided? <span>+</span></div>
+            <div class="faq-answer">The app's content is currently available in Turkish and English. Other languages may
+                be added in the future.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Does this app help children develop social skills? <span>+</span></div>
+            <div class="faq-answer">Yes, the app encourages children's curiosity and allows them to socialize by sharing
+                experiences with family or working in groups for some activities.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Are there plans to release new content in the future? <span>+</span></div>
+            <div class="faq-answer">Yes, new content is regularly added by the development team, allowing children to
+                continuously learn new information.</div>
+        </div>
+
+        <div class="pagination" id="pagination"></div>
+    </div>
+
+    <footer class="footer">
+        {% include 'ARWebProject/footerEn.html' %}
+    </footer>
+
+    <script src="../../static/ARWebProject/faqScript.js"></script>
+</body>
+
+</html>
+{% endblock %}

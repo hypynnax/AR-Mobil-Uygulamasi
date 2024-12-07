@@ -1,0 +1,38 @@
+{% extends 'ARWebProject/baseEn.html' %}
+{% load static %}
+{% block title %}Our Vision{% endblock %}
+{% block content %}
+{% include 'ARWebProject/navbarEn.html' %}
+
+<body>
+    <video autoplay muted loop class="background-video">
+        <source src="../../static/ARWebProject/img/background.mp4" type="video/mp4">
+    </video>
+
+    <div class="terminal-loader" style="margin-top: 200px;">
+        <div class="terminal-header">
+            <div class="terminal-title">Our Vision</div>
+            <div class="terminal-controls">
+                <div class="control close"></div>
+                <div class="control minimize"></div>
+                <div class="control maximize"></div>
+            </div>
+        </div>
+
+        <div class="terminal-text">
+            Our vision is to give millions of children around the world the opportunity to engage creatively with
+            technology. to help them become the leaders of the future in informatics. To make education more fun,
+            interesting and to reshape children's learning processes by making them innovative and to make them more
+            adaptable to the digital world. We want to raise them as conscious, productive individuals.
+        </div>
+    </div>
+
+    <footer class="footer" style="position: fixed; bottom: 0; left: 0;">
+        {% include 'ARWebProject/footerEn.html' %}
+    </footer>
+
+    <script src="../../static/ARWebProject/script.js"></script>
+</body>
+
+</html>
+{% endblock %}

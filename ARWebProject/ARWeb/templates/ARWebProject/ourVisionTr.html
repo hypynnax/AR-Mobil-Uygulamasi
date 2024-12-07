@@ -1,0 +1,38 @@
+{% extends 'ARWebProject/baseTr.html' %}
+{% load static %}
+{% block title %}Vizyonumuz{% endblock %}
+{% block content %}
+{% include 'ARWebProject/navbarTr.html' %}
+
+<body>
+    <video autoplay muted loop class="background-video">
+        <source src="../../static/ARWebProject/img/background.mp4" type="video/mp4">
+    </video>
+
+    <div class="terminal-loader" style="margin-top: 200px;">
+        <div class="terminal-header">
+            <div class="terminal-title">Vizyonumuz</div>
+            <div class="terminal-controls">
+                <div class="control close"></div>
+                <div class="control minimize"></div>
+                <div class="control maximize"></div>
+            </div>
+        </div>
+
+        <div class="terminal-text">
+            Vizyonumuz, dünya genelinde milyonlarca çocuğa teknolojiyle yaratıcı bir şekilde etkileşime geçme fırsatı
+            sunarak bilişimde geleceğin liderleri olmalarına katkı sağlamak. Eğitimi daha eğlenceli, ilgi çekici ve
+            yenilikçi hale getirerek çocukların öğrenme süreçlerini yeniden şekillendirmek ve onları dijital dünyanın
+            bilinçli, üretken bireyleri olarak yetiştirmek istiyoruz.
+        </div>
+    </div>
+
+    <footer class="footer" style="position: fixed; bottom: 0; left: 0;">
+        {% include 'ARWebProject/footerTr.html' %}
+    </footer>
+
+    <script src="../../static/ARWebProject/script.js"></script>
+</body>
+
+</html>
+{% endblock %}

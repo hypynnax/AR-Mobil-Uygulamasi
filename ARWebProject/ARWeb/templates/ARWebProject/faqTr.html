@@ -1,0 +1,153 @@
+{% extends 'ARWebProject/baseTr.html' %}
+{% load static %}
+{% block title %}SSS{% endblock %}
+{% block content %}
+{% include 'ARWebProject/navbarTr.html' %}
+
+<body style="display: flex; justify-content: center; align-items: center; background-color: #1e2a38; color: #ffffff;">
+    <div class="faq-container">
+        <div class="faq-title">Sıkça Sorulan Sorular</div>
+
+        <input type="text" class="search-box" placeholder="Search questions..." onkeyup="filterQuestions()">
+
+        <div class="faq-item">
+            <div class="faq-question">Bu uygulama ne işe yarar? <span>+</span></div>
+            <div class="faq-answer">Bu uygulama, çocukların farklı konuları eğlenceli ve interaktif bir şekilde
+                öğrenmesini sağlar. Artırılmış Gerçeklik teknolojisi sayesinde, gerçek dünyada çeşitli dijital öğeleri
+                görebilirler.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Artırılmış Gerçeklik (AR) nedir? <span>+</span></div>
+            <div class="faq-answer">AR, gerçek dünyaya dijital öğeler ekleyen bir teknolojidir. Uygulama sayesinde
+                çocuklar tablet veya telefon kamerasını kullanarak gerçek ortamda 3D nesneler ve animasyonlar görebilir.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Bu uygulama hangi yaş grubu için uygun? <span>+</span></div>
+            <div class="faq-answer">Bu uygulama, genellikle 6-12 yaş arası çocuklar için uygun olarak tasarlanmıştır.
+                Küçük yaştaki çocuklar için bir ebeveyn gözetimi önerilir.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Uygulamayı kullanmak için internet bağlantısı gerekiyor mu? <span>+</span></div>
+            <div class="faq-answer">Evet, bazı içerikler internet üzerinden çalıştığı için Wi-Fi veya mobil veri
+                bağlantısına ihtiyaç duyabilirsiniz. Ancak bazı içerikler çevrimdışı da kullanılabilir.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Bu uygulama güvenli mi? <span>+</span></div>
+            <div class="faq-answer">Evet, uygulama çocuklar için güvenli içerikler sunacak şekilde tasarlanmıştır ve
+                herhangi bir zararlı içerik barındırmaz.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Çocuklar uygulamayı nasıl kullanacak? <span>+</span></div>
+            <div class="faq-answer">Uygulamayı indirdikten sonra, çocuklar tablet veya telefon kamerasını belirli
+                noktalara doğrultarak çeşitli 3D nesneleri ve animasyonları görebilir, aynı zamanda etkileşimli oyunlar
+                oynayabilirler.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Uygulama ücretsiz mi? <span>+</span></div>
+            <div class="faq-answer">Uygulamanın temel özellikleri ücretsizdir; ancak daha fazla içeriğe ve bazı özel
+                özelliklere erişmek için ücretli bir sürüm de bulunmaktadır.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Uygulamada ne tür içerikler var? <span>+</span></div>
+            <div class="faq-answer">Uygulamada hayvanlar, doğa, bilim, mitoloji gibi çeşitli konularda AR destekli
+                içerikler bulunur. Çocuklar bu konularda eğlenerek öğrenebilirler.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Uygulamada oyun var mı? <span>+</span></div>
+            <div class="faq-answer">Evet, bazı konularda oyunlar mevcut. Örneğin, çocuklar sanal hayvanları besleyebilir
+                veya bilim temalı mini oyunlarla görevleri tamamlayabilirler.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Uygulama çocuklara nasıl bir eğitim sunuyor? <span>+</span></div>
+            <div class="faq-answer">Uygulama, artırılmış gerçeklik sayesinde çocukların derslerde öğrendiklerini
+                pekiştirmesini sağlar ve aynı zamanda yeni konular hakkında bilgi edinmelerine yardımcı olur.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Çocuğum telefon veya tablet ekranına fazla mı maruz kalır? <span>+</span></div>
+            <div class="faq-answer">Uygulama, kısa süreli etkinlikler sunacak şekilde tasarlanmıştır. Ebeveynler ekran
+                kullanım süresini kontrol edebilir ve gerektiğinde ara vermelerini sağlayabilir.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Uygulamayı kullanırken çocuğumun bir yerde sabit kalması gerekiyor mu?
+                <span>+</span>
+            </div>
+            <div class="faq-answer">Evet, güvenlik açısından çocukların sabit bir yerde uygulamayı kullanması önemlidir.
+                Koşmadan veya hareket etmeden cihazı sabit tutarak deneyimlemeleri önerilir.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Uygulamanın tüm özelliklerini kullanmak için özel bir cihaz gerekiyor mu?
+                <span>+</span>
+            </div>
+            <div class="faq-answer">Çoğu modern telefon ve tablet artırılmış gerçekliği destekler. Ancak, eski
+                cihazlarda uygulamanın bazı özellikleri düzgün çalışmayabilir.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Çocuğumun uygulamayı tek başına kullanması güvenli mi? <span>+</span></div>
+            <div class="faq-answer">Evet, içerikler çocuklar için uygun olsa da, özellikle küçük yaş grubu için ebeveyn
+                gözetimi önerilir.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Bu uygulama çocuğumun okulda öğrendiği konulara yardımcı olur mu? <span>+</span>
+            </div>
+            <div class="faq-answer">Evet, bazı içerikler okul müfredatını destekleyen bilgiler içerir ve çocukların
+                bilgilerini uygulamalı olarak görmelerini sağlar.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Çocuğum uygulamada içerik oluşturarak katkı yapabilir mi? <span>+</span></div>
+            <div class="faq-answer">Şu anda kullanıcı tarafından içerik oluşturma özelliği bulunmamaktadır, ancak
+                güncellemelerle yeni özellikler eklenebilir.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Uygulama cihazın hafızasında çok yer kaplar mı? <span>+</span></div>
+            <div class="faq-answer">Uygulamanın boyutu, ek içeriklerle birlikte değişebilir. Fazla yer kaplamaması için
+                gereksiz dosyalar belirli aralıklarla temizlenebilir.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">AR içerikleri hangi dilde sunuluyor? <span>+</span></div>
+            <div class="faq-answer">Uygulama içerikleri şu an için Türkçe ve İngilizce dillerinde mevcuttur. İlerleyen
+                zamanlarda diğer diller de eklenebilir.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Bu uygulama çocuklara sosyal beceriler kazandırır mı? <span>+</span></div>
+            <div class="faq-answer">Evet, uygulama çocukların keşfetme isteğini destekler ve bazı etkinliklerde grup
+                çalışması yaparak veya ebeveynleriyle paylaşımda bulunarak sosyalleşmelerini sağlar.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Uygulamanın ilerleyen zamanlarda yeni içerikler sunma planı var mı? <span>+</span>
+            </div>
+            <div class="faq-answer">Evet, geliştirici ekip tarafından düzenli olarak yeni içerikler eklenmektedir,
+                böylece çocuklar sürekli yeni bilgiler öğrenebilir.</div>
+        </div>
+
+        <div class="pagination" id="pagination"></div>
+    </div>
+
+    <footer class="footer">
+        {% include 'ARWebProject/footerTr.html' %}
+    </footer>
+
+    <script src="../../static/ARWebProject/faqScript.js"></script>
+</body>
+
+</html>
+{% endblock %}

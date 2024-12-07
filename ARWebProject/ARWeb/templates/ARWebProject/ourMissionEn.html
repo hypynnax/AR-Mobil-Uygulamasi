@@ -1,0 +1,38 @@
+{% extends 'ARWebProject/baseEn.html' %}
+{% load static %}
+{% block title %}Our Mission{% endblock %}
+{% block content %}
+{% include 'ARWebProject/navbarEn.html' %}
+
+<body>
+    <video autoplay muted loop class="background-video">
+        <source src="../../static/ARWebProject/img/background.mp4" type="video/mp4">
+    </video>
+
+    <div class="terminal-loader" style="margin-top: 200px;">
+        <div class="terminal-header">
+            <div class="terminal-title">Our Mission</div>
+            <div class="terminal-controls">
+                <div class="control close"></div>
+                <div class="control minimize"></div>
+                <div class="control maximize"></div>
+            </div>
+        </div>
+
+        <div class="terminal-text">
+            Our mission is to enable children to think creatively, solve problems and master information technologies in
+            the digital world. to make them the conscious individuals of the future by increasing their abilities.
+            Augmented reality (AR) We offer a fun and interactive learning experience using technology. More technology
+            develop children's imagination and IT skills by making them accessible and comprehensible we aim to.
+        </div>
+    </div>
+
+    <footer class="footer" style="position: fixed; bottom: 0; left: 0;">
+        {% include 'ARWebProject/footerEn.html' %}
+    </footer>
+
+    <script src="../../static/ARWebProject/script.js"></script>
+</body>
+
+</html>
+{% endblock %}

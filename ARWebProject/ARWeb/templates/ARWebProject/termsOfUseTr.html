@@ -1,0 +1,53 @@
+{% extends 'ARWebProject/baseTr.html' %}
+{% load static %}
+{% block title %}Kullanım Koşulları{% endblock %}
+{% block content %}
+{% include 'ARWebProject/navbarTr.html' %}
+
+<body style="background-color: #f9f9f9">
+    <div class="terms-container">
+        <h1>Kullanım Koşulları</h1>
+
+        <h2>1. Genel Şartlar</h2>
+        <p>Bu web sitesine erişim sağladığınızda, aşağıdaki kullanım koşullarını kabul etmiş sayılırsınız.</p>
+
+        <h2>2. Hizmetin Kullanımı</h2>
+        <p>Web sitemizi kullanarak, sağlanan bilgilerin güncel, doğru ve eksiksiz olduğunu kabul etmektesiniz.</p>
+
+        <h2>3. Kullanıcı Sorumlulukları</h2>
+        <p>Kullanıcılar, sitedeki içerikleri yasalara uygun şekilde kullanmakla yükümlüdür. Web sitesinde yapılan
+            herhangi bir yanlış kullanım nedeniyle oluşabilecek zararlardan sorumlu değiliz.</p>
+
+        <h2>4. Fikri Mülkiyet</h2>
+        <p>Bu sitedeki tüm içerikler (metin, görsel ve medya dosyaları) koruma altındadır. İzinsiz kullanılması
+            yasaktır.</p>
+
+        <h2>5. Gizlilik Politikası</h2>
+        <p>Kullanıcı bilgilerinin gizliliği bizim için önemlidir. Daha fazla bilgi için gizlilik politikamızı inceleyin.
+        </p>
+
+        <h2>6. Değişiklik Hakkı</h2>
+        <p>Bu kullanım koşulları, herhangi bir bildirimde bulunmaksızın değiştirilebilir. Kullanıcılar, kullanım
+            koşullarını düzenli olarak gözden geçirmelidir.</p>
+
+        <h2>7. İletişim</h2>
+        <p>Bu koşullarla ilgili sorularınız varsa, lütfen bizimle iletişime geçin.</p>
+
+        <div class="scroll-to-top">
+            <button onclick="scrollToTop()">Yukarı Çık</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        {% include 'ARWebProject/footerTr.html' %}
+    </footer>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>
+{% endblock %}

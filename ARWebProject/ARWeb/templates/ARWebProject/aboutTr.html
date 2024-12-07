@@ -1,0 +1,45 @@
+{% extends 'ARWebProject/baseTr.html' %}
+{% load static %}
+{% block title %}Hakkında{% endblock %}
+{% block content %}
+{% include 'ARWebProject/navbarTr.html' %}
+
+<body>
+    <video autoplay muted loop class="background-video">
+        <source src="../../static/ARWebProject/img/background.mp4" type="video/mp4">
+    </video>
+
+    <div class="terminal-loader" style="margin-top: 110px;">
+        <div class="terminal-header">
+            <div class="terminal-title">Hakkında</div>
+            <div class="terminal-controls">
+                <div class="control close"></div>
+                <div class="control minimize"></div>
+                <div class="control maximize"></div>
+            </div>
+        </div>
+
+        <div class="terminal-text">
+            Bilge Korkut, çocuklar için interaktif eğitim teknolojileri geliştiren yenilikçi bir mobil uygulama
+            şirketidir. Teknolojinin hızla gelişen dünyasında çocukların yaratıcı düşünme, problem çözme ve bilişim
+            becerilerini geliştirmenin önemine inanıyoruz. Bu doğrultuda, arttırılmış gerçeklik (AR) teknolojisini
+            kullanarak çocuklar için bilişim eğitimini eğlenceli, erişilebilir ve sürdürülebilir hale getirmeyi
+            hedefliyoruz.
+
+            Uygulamamız, çocukların dijital okuryazarlık becerilerini güçlendirmeyi ve onları geleceğin teknoloji
+            liderleri haline getirmeyi amaçlıyor. Bilim, matematik, bilgisayar programlama gibi önemli konuları kapsayan
+            içeriklerimiz, çocukların teknolojiyle daha anlamlı bir ilişki kurmalarını sağlıyor. AR teknolojisiyle
+            etkileşimi birleştirerek öğrenmeyi eğlenceli hale getirirken, çocukların bilişim dünyasında kendilerine
+            güvenen bireyler olmalarına katkıda bulunuyoruz.
+        </div>
+    </div>
+
+    <footer class="footer" style="position: fixed; bottom: 0; left: 0;">
+        {% include 'ARWebProject/footerTr.html' %}
+    </footer>
+
+    <script src="../../static/ARWebProject/script.js"></script>
+</body>
+
+</html>
+{% endblock %}
